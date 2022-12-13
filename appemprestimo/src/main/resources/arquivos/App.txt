@@ -1,0 +1,28 @@
+P;AppEmprestimo;Projeto Empréstimo na Biblioteca
+C;Emprestimo;
+A;dataEmprestimo;LocalDateTime;Data da realização do empréstimo.
+A;dataDevolucao;LocalDateTime;Data de devolução do empréstimo realizado.
+C;Solicitante;
+A;nome;String;Nome do solicitante
+A;cpf;String;CPF do solicitante
+C;Produto;
+A;titulo;String;Título do produto a ser emprestado.
+A;estante;int;Em qual estante está localizado o produto.
+A;codigoBarras;String;Representação gráfica de uma sequência numérica utilizada para identificar um produto.
+A;qtdExemplares;int;Quantidade de exemplares do mesmo produto.
+A;qtdDisponiveis;int;Quantidade de produtos disponíveis.
+C;Livro;
+A;isbn;String;Padrão de identificação de numeração dos livros a serem emprestados.
+A;volume;int;Volume identificado em livros.
+A;edicao;int;Número da edição dos livros.
+A;anoPublicacao;int;Ano de publicação dos livros.
+A;nomeAutor;String;Nome do autor principal dos livros.
+C;Revista;
+A;issn;String;Número internacional normalizado para publicações seriadas, como é o caso de Revistas.
+A;edicao;int;Número da edição das Revistas.
+A;ano;int;Ano das Revistas.
+C;MaterialDigital;
+A;doi;String;Identificador de arquivo digital.
+A;volume;int;Volume identificado nos arquivos digitais.
+A;ano;int;Ano do arquivo digital.
+A;linkDoi;String;Link completo contendo o código DOI.
