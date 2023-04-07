@@ -25,6 +25,11 @@ public class Solicitante {
 		this.endereco = endereco;
 	}
 	
+	public Solicitante toSolicitante(){
+        return new Solicitante(codigo, nome, email, endereco);
+    }
+	
+	
 	public Long getCodigo() {
 		return codigo;
 	}

@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "a1cedefc-be75-401d-a8bf-434a21b09781",
+		"name": "_POS_INFNET",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6606029"
+	},
+	"item": [
+		{
+			"name": "Emprestimo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emprestimoid\": 1,\r\n    \"solicitanteid\": 99,\r\n    \"produtos\": [\r\n        {\r\n            \"codigo\": 1,\r\n            \"quantidade\": 2\r\n        },\r\n        {\r\n            \"codigo\": 2,\r\n            \"quantidade\": 5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8282/emprestimos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"emprestimos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Solicitantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8383/solicitantes/99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"solicitantes",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eureka-Service Discovery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8761/eureka/apps",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8761",
+					"path": [
+						"eureka",
+						"apps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produtos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8484/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8484",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfigServer-solicitante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/solicitante/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"solicitante",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfigServer-produto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/produto/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"produto",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway-emprestimos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emprestimoid\": 1,\r\n    \"solicitanteid\": 99,\r\n    \"produtos\": [\r\n        {\r\n            \"codigo\": 1,\r\n            \"quantidade\": 2\r\n        },\r\n        {\r\n            \"codigo\": 2,\r\n            \"quantidade\": 5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/emprestimos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"emprestimos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway-produtos ou solicitantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8585/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

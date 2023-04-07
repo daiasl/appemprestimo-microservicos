@@ -12,6 +12,10 @@ public class SolicitanteService {
 	@Autowired
 	private SolicitanteRepository solicitanteRepository;
 	
+	public SolicitanteService(SolicitanteRepository repository) {
+        this.solicitanteRepository = repository;
+    }
+	
 	public Solicitante getByCodigo(Long codigo) {
 		Solicitante solicitante = solicitanteRepository.findById(codigo).get();		
 		return solicitante;
